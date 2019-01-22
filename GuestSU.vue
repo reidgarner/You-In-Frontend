@@ -1,13 +1,13 @@
 <template>
     <view class="container">
-        <text class="text-color-primary">You In?</text>
+        <text class="title">You In?</text>
         <text class="As-a">Guest</text>
         <view class="input-container">
             <text-input class="input" v-model="text" placeholder="Full Name"/>
             <text-input class="input" v-model="text" placeholder="Email"/>
             <text-input class="input" v-model="text" placeholder="Password"/>
         </view>
-        <touchable-opacity class="button-2" :on-press="handleButton">
+        <touchable-opacity class="button-2" :on-press="handleYourPeople">
             <text class="button-text">Signup</text>
         </touchable-opacity>
     </view>
@@ -38,8 +38,8 @@ export default {
     },
 
     methods: {
-        handleButton() {
-            this.navigation.navigate("Login");
+        handleYourPeople() {
+            this.navigation.navigate("YourPeople");
         }
     }
 }
@@ -52,7 +52,7 @@ export default {
     justify-content: center;
     flex: 1;
 }
-.text-color-primary {
+.title {
     color: black;
     font-size: 50;
     position: relative; bottom: 150;

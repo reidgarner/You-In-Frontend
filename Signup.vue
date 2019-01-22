@@ -1,6 +1,6 @@
 <template>
     <view class="container">
-        <text class="text-color-primary">You In?</text>
+        <text class="title">You In?</text>
         <text class="As-a">Sign Up as a</text>
         <touchable-opacity class="button-1" :on-press="handleGuestSU">
             <text class="button-text">Guest</text>
@@ -54,7 +54,7 @@ export default {
     justify-content: center;
     flex: 1;
 }
-.text-color-primary {
+.title {
     color: black;
     font-size: 50;
     position: relative; bottom: 150;

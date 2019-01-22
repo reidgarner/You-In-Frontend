@@ -1,16 +1,15 @@
 <template>
     <view class="container">
         <text class="title">You In?</text>
-        <text class="As-a">Login as a</text>
-        <touchable-opacity class="button-1" :on-press="handleGuestLogin">
-            <text class="button-text">Guest</text>
-        </touchable-opacity>
-        <text class="Or">Or a</text>
-        <touchable-opacity class="button-2" :on-press="handleSPLogin">
-            <text class="button-text">Service</text>
-            <text class="button-text">Provider</text>
-        </touchable-opacity>
+        <text class="As-a">Service Provider</text>
+        <view class="input-container">
+            <text-input class="input" v-model="text" placeholder="Email"/>
+            <text-input class="input" v-model="text" placeholder="Password"/>
         </view>
+        <touchable-opacity class="button-2" :on-press="handleSubscribers">
+            <text class="button-text">Login</text>
+        </touchable-opacity>
+    </view>
 </template>
 
 <script>
@@ -25,7 +24,8 @@ export default {
 
     data() {
         return {
-            isLoaded: false
+            isLoaded: false,
+            text: ''
     }
     },
 
@@ -37,11 +37,8 @@ export default {
     },
 
     methods: {
-        handleGuestLogin() {
-            this.navigation.navigate("GuestLogin");
-        },
-        handleSPLogin() {
-            this.navigation.navigate("SPLogin");
+        handleSubscribers() {
+            this.navigation.navigate("Subscribers");
         }
     }
 }
@@ -92,7 +89,6 @@ export default {
 .As-a {
     color: black;
     font-size: 40;
-    position: relative; top: 30;
     font-family: Courier;
 }
 
@@ -102,4 +98,21 @@ export default {
     position: relative; top: 60;
     font-family: Courier;
 }
+
+.input-container {
+    display: flex;
+    justify-content: space-evenly;
+    height: 200;
+    width: 300;
+
+}
+
+.input {
+    height: 50; 
+    width: 300; 
+    border-radius: 10; 
+    border-color: gray; 
+    border-width: 1;
+}
+
 </style>
