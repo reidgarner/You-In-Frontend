@@ -42,7 +42,7 @@ const AppNavigation = StackNavigator(
     YourPeople: YourPeopleScreen
   },
   {
-    initialRouteName: 'Drawer',
+    initialRouteName: 'Main',
   }
 );
 export default {

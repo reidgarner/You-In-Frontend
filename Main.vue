@@ -7,7 +7,7 @@
         <touchable-opacity class="button-2" :on-press="handleSignup">
             <text class="button-text">Sign Up</text>
         </touchable-opacity>
-        </view>
+    </view>
 </template>
 
 <script>

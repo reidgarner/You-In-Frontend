@@ -37,15 +37,6 @@ export default {
             'Reenie Beanie': require('./assets/fonts/ReenieBeanie.ttf')
         })
     this.isLoaded = true;
-    },
-
-    methods: {
-        handleButton() {
-            this.navigation.navigate("Login");
-        },
-        handleListTap(subscriber) {
-            console.log(subscriber.name) 
-        }
     }
 }
 </script>

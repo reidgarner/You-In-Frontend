@@ -1,7 +1,7 @@
 <template>
     <view class="container">
         <text class="title">Subscribers</text>
-        <view :style="{borderTopWidth: 1, borderTopColor: 'gray', width: '100%'}"></view>
+        <!-- <view :style="{borderTopWidth: 1, borderTopColor: 'gray', width: '100%'}"></view> -->
         <scroll-view :style="{width: '100%'}">
             <view class="border" v-for="(subscriber, index) in subscribers" :key="index">
                 <touchable-opacity class="flex-container" :on-press="() => handleListTap(subscriber)">
@@ -76,9 +76,9 @@ export default {
 }
 
 .border {
-    border-bottom-width: 1;
+    /* border-bottom-width: 1;
     border-color: gray;
-    width: 100%;
+    width: 100%; */
     padding: 15;
 }
 
