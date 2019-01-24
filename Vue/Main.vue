@@ -2,7 +2,7 @@
     <view class="container">
         <status-bar :barStyle="'dark-content'"></status-bar>
         <image-background :source="bartenderImg" class="imageContainer">
-            <text class="title">You In?</text>
+            <image :source="logo" class="logo"></image>
             <touchable-opacity class="button-1" :on-press="handleLogin">
                 <text class="button-text">Login</text>
             </touchable-opacity>
@@ -14,7 +14,8 @@
 </template>
 
 <script>
-import bartenderImg from "/Users/reidgarner/Galv-Projects/CAPSTONE/You-In-Frontend/assets/Bartender-Background.jpg";
+import bartenderImg from "/Users/reidgarner/Galv-Projects/CAPSTONE/You-In-Frontend/assets/bartender-opacified-2.png";
+import logo from "/Users/reidgarner/Galv-Projects/CAPSTONE/You-In-Frontend/assets/Logo.png";
 
 export default {
     props: {
@@ -25,7 +26,11 @@ export default {
 
     data() {
         return {
-            bartenderImg: bartenderImg
+            logo: logo,
+            bartenderImg: bartenderImg,
+            statusBar: {
+                backgroundColor: 'black'
+                }
     }
     },
 
@@ -45,9 +50,9 @@ export default {
     flex: 1;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    opacity: .8;
-    position: relative; z-index: -1;
+    width: 130%;
+    /* opacity: .8; */
+    position: relative; left: 50;
 }
 
 .container {
@@ -56,12 +61,12 @@ export default {
     justify-content: center;
     flex: 1;
 }
-.title {
-    color: black;
-    font-size: 50;
-    position: relative; bottom: 150;
-    font-family: Courier;
-    opacity: 1;
+
+.logo {
+    height: 25%;
+    width: 40%;
+    position: relative; bottom: 190; right: 135;
+    border-radius: 7;
 }
 
 .button-1 {
@@ -90,5 +95,9 @@ export default {
     color: rgb(159, 159, 159);
     font-size: 40;
     font-family: Courier;
+}
+
+.status-bar{
+    background-color: black;
 }
 </style>
