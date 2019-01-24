@@ -1,20 +1,18 @@
 <template>
     <view class="container">
         <text class="title">You In?</text>
-        <text class="As-a">Service Provider</text>
+        <text class="As-a">Bar Guest</text>
         <view class="input-container">
-            <text-input class="input" v-model="text" placeholder="Email"/>
-            <text-input class="input" v-model="text" placeholder="Password"/>
+            <text-input class="input" auto-capitalize="none" v-model="email" placeholder="Email"/>
+            <text-input class="input" auto-capitalize="none" v-model="password" placeholder="Password"/>
         </view>
-        <touchable-opacity class="button-2" :on-press="handleSubscribers">
+        <touchable-opacity class="button" :on-press="handleYourBartenders">
             <text class="button-text">Login</text>
         </touchable-opacity>
     </view>
 </template>
 
 <script>
-import { Font } from 'expo';
-
 export default {
     props: {
         navigation: {
@@ -24,21 +22,14 @@ export default {
 
     data() {
         return {
-            isLoaded: false,
-            text: ''
+            email: '',
+            password: ''
     }
     },
 
-    async mounted() {
-        await Expo.Font.loadAsync({
-            'Reenie Beanie': require('./assets/fonts/ReenieBeanie.ttf')
-        })
-    this.isLoaded = true;
-    },
-
     methods: {
-        handleSubscribers() {
-            this.navigation.navigate("Subscribers");
+        handleYourBartenders() {
+            this.navigation.navigate("YourBartenders");
         }
     }
 }
@@ -58,18 +49,7 @@ export default {
     font-family: Courier;
 }
 
-.button-1 {
-    background-color: rgb(67, 67, 67);
-    width: 250;
-    height: 50;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10;
-    position: relative; top: 50;
-}
-
-.button-2 {
+.button {
     background-color: rgb(67, 67, 67);
     width: 250;
     height: 100;
@@ -92,13 +72,6 @@ export default {
     font-family: Courier;
 }
 
-.Or {
-    color: black;
-    font-size: 40;
-    position: relative; top: 60;
-    font-family: Courier;
-}
-
 .input-container {
     display: flex;
     justify-content: space-evenly;
@@ -114,5 +87,4 @@ export default {
     border-color: gray; 
     border-width: 1;
 }
-
 </style>

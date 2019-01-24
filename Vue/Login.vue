@@ -3,19 +3,16 @@
         <text class="title">You In?</text>
         <text class="As-a">Login as a</text>
         <touchable-opacity class="button-1" :on-press="handleGuestLogin">
-            <text class="button-text">Guest</text>
+            <text class="button-text">Bar Guest</text>
         </touchable-opacity>
         <text class="Or">Or a</text>
-        <touchable-opacity class="button-2" :on-press="handleSPLogin">
-            <text class="button-text">Service</text>
-            <text class="button-text">Provider</text>
+        <touchable-opacity class="button-2" :on-press="handleBTLogin">
+            <text class="button-text">Bartender</text>
         </touchable-opacity>
         </view>
 </template>
 
 <script>
-import { Font } from 'expo';
-
 export default {
     props: {
         navigation: {
@@ -23,25 +20,12 @@ export default {
         }
     },
 
-    data() {
-        return {
-            isLoaded: false
-    }
-    },
-
-    async mounted() {
-        await Expo.Font.loadAsync({
-            'Reenie Beanie': require('./assets/fonts/ReenieBeanie.ttf')
-        })
-    this.isLoaded = true;
-    },
-
     methods: {
         handleGuestLogin() {
             this.navigation.navigate("GuestLogin");
         },
-        handleSPLogin() {
-            this.navigation.navigate("SPLogin");
+        handleBTLogin() {
+            this.navigation.navigate("BTLogin");
         }
     }
 }

@@ -14,20 +14,11 @@
 </template>
 
 <script>
-import { Font } from 'expo';
-
 export default {
     props: {
         navigation: {
             type: Object
         }
-    },
-
-    async mounted() {
-        await Expo.Font.loadAsync({
-            'Reenie Beanie': require('./assets/fonts/ReenieBeanie.ttf')
-        })
-    this.isLoaded = true;
     },
 
     methods: {
@@ -56,18 +47,6 @@ export default {
     font-size: 50;
     /* position: relative; bottom: 375; */
     font-family: Courier;
-}
-
-.username {
-    font-size: 30;
-}
-
-.workplace {
-    font-size: 20;
-}
-
-.username-container {
-    align-items: center;
 }
 
 .button-1 {

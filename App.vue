@@ -5,17 +5,17 @@
 <script>
 import { StackNavigator } from "vue-native-router";
 import { DrawerNavigator } from "vue-native-router";
-import MainScreen from "./Main";
-import LoginScreen from "./Login";
-import SignupScreen from "./Signup";
-import GuestSUScreen from "./GuestSU";
-import SPSignUpScreen from "./SPSignUp";
-import GuestLoginScreen from "./GuestLogin";
-import SPLoginScreen from "./SPLogin";
-import SubscribersScreen from "./Subscribers";
-import YourPeopleScreen from "./YourPeople";
-import UserScreen from "./User";
-import AccountScreen from "./Account";
+import MainScreen from "./Vue/Main";
+import LoginScreen from "./Vue/Login";
+import SignupScreen from "./Vue/Signup";
+import GuestSUScreen from "./Vue/GuestSU";
+import BTSignUpScreen from "./Vue/BTSignUp";
+import GuestLoginScreen from "./Vue/GuestLogin";
+import BTLoginScreen from "./Vue/BTLogin";
+import YourGuestsScreen from "./Vue/YourGuests";
+import YourBartendersScreen from "./Vue/YourBartenders";
+import UserScreen from "./Vue/User";
+import AccountScreen from "./Vue/Account";
 
 const Drawer = DrawerNavigator(
   {
@@ -35,14 +35,14 @@ const AppNavigation = StackNavigator(
     Login: LoginScreen,
     Signup: SignupScreen,
     GuestSU: GuestSUScreen,
-    SPSignUp: SPSignUpScreen,
+    BTSignUp: BTSignUpScreen,
     GuestLogin: GuestLoginScreen,
-    SPLogin: SPLoginScreen,
-    Subscribers: SubscribersScreen,
-    YourPeople: YourPeopleScreen
+    BTLogin: BTLoginScreen,
+    YourGuests: YourGuestsScreen,
+    YourBartenders: YourBartendersScreen
   },
   {
-    initialRouteName: 'Main',
+    initialRouteName: 'Drawer',
   }
 );
 export default {

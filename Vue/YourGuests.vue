@@ -1,15 +1,14 @@
 <template>
     <view class="container">
-        <text class="title">Subscribers</text>
-        <!-- <view :style="{borderTopWidth: 1, borderTopColor: 'gray', width: '100%'}"></view> -->
+        <text class="title">Your Guests</text>
         <scroll-view :style="{width: '100%'}">
-            <view class="border" v-for="(subscriber, index) in subscribers" :key="index">
-                <touchable-opacity class="flex-container" :on-press="() => handleListTap(subscriber)">
+            <view class="border" v-for="(guest, index) in guests" :key="index">
+                <touchable-opacity class="flex-container" :on-press="() => handleListTap(guest)">
                     <image 
                     :style="{width: 40, height: 40, borderRadius: 20, marginRight: 8}"
-                    :source="{uri: subscriber.image}"
+                    :source="{uri: guest.image}"
                     />
-                    <text>{{ subscriber.name }}</text>
+                    <text>{{ guest.name }}</text>
                 </touchable-opacity>
             </view>
         </scroll-view>
@@ -17,8 +16,6 @@
 </template>
 
 <script>
-import { Font } from 'expo';
-
 export default {
     props: {
         navigation: {
@@ -28,9 +25,7 @@ export default {
 
     data() {
         return {
-            isLoaded: false,
-            text: '',
-            subscribers: [
+            guests: [
                 { name: "Andrew Pederson", image: "https://media.licdn.com/dms/image/C4E03AQEpxR0WN9GdcQ/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=oiOQvx3RNjfSSIDt8WZPY2KxHzdU5mZt77ru6btBE0o"},
                 { name: "Josh Scala", image: "https://media.licdn.com/dms/image/C4E03AQF3bGM_mVBJ7A/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=_Ok9fTOd6ItBeimZIOIMxa4Hn75xrkiwgQkOnX4-Rqo"},
                 { name: "Meredith Fontana", image: "https://media.licdn.com/dms/image/C4E03AQFa0C4W1juD4Q/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=qodE-DNhf-5dJF_gLPC-fWtRbQdM0cL8wkhPR3cHCNs"},
@@ -40,22 +35,15 @@ export default {
                 { name: "Sonja Chacon", image: "https://media.licdn.com/dms/image/C4E03AQGEg5ZaDPyHCQ/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=ppVLrLBhrOIXl-rF80pw_p3M0ln5h3joNoffQfjcUpo"},
                 { name: "Ben Rumsey", image: "https://media.licdn.com/dms/image/C4E03AQHDx8tdiYUO8w/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=bt7H5j4xLR08-wj1wov8y0-VVyUh1friEZ4iRyrHbKo"}
             ]
-    }
-    },
-
-    async mounted() {
-        await Expo.Font.loadAsync({
-            'Reenie Beanie': require('./assets/fonts/ReenieBeanie.ttf')
-        })
-    this.isLoaded = true;
+        }
     },
 
     methods: {
         handleButton() {
             this.navigation.navigate("Login");
         },
-        handleListTap(subscriber) {
-            console.log(subscriber.name) 
+        handleListTap(guest) {
+            console.log(guest.name) 
         }
     }
 }
@@ -71,14 +59,10 @@ export default {
 .title {
     color: black;
     font-size: 50;
-    /* position: relative; bottom: 375; */
     font-family: Courier;
 }
 
 .border {
-    /* border-bottom-width: 1;
-    border-color: gray;
-    width: 100%; */
     padding: 15;
 }
 
@@ -86,5 +70,4 @@ export default {
     flex-direction: row;
     align-items: center;
 }
-
 </style>

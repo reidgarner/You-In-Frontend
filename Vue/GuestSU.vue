@@ -1,21 +1,20 @@
 <template>
     <view class="container">
         <text class="title">You In?</text>
-        <text class="As-a">Guest</text>
+        <text class="As-a">Bar Guest</text>
         <view class="input-container">
-            <text-input class="input" v-model="text" placeholder="Full Name"/>
-            <text-input class="input" v-model="text" placeholder="Email"/>
-            <text-input class="input" v-model="text" placeholder="Password"/>
+            <text-input class="input" auto-capitalize="none" v-model="first_name" placeholder="First Name"/>
+            <text-input class="input" auto-capitalize="none" v-model="last_name" placeholder="Last Name"/>
+            <text-input class="input" auto-capitalize="none" v-model="email" placeholder="Email"/>
+            <text-input class="input" auto-capitalize="none" v-model="password" placeholder="Password"/>
         </view>
-        <touchable-opacity class="button-2" :on-press="handleYourPeople">
+        <touchable-opacity class="button" :on-press="handleYourBartenders">
             <text class="button-text">Signup</text>
         </touchable-opacity>
     </view>
 </template>
 
 <script>
-import { Font } from 'expo';
-
 export default {
     props: {
         navigation: {
@@ -25,21 +24,16 @@ export default {
 
     data() {
         return {
-            isLoaded: false,
-            text: ''
+            first_name: '',
+            last_name: '',
+            email: '',
+            password: ''
     }
     },
 
-    async mounted() {
-        await Expo.Font.loadAsync({
-            'Reenie Beanie': require('./assets/fonts/ReenieBeanie.ttf')
-        })
-    this.isLoaded = true;
-    },
-
     methods: {
-        handleYourPeople() {
-            this.navigation.navigate("YourPeople");
+        handleYourBartenders() {
+            this.navigation.navigate("YourBartenders");
         }
     }
 }
@@ -52,6 +46,7 @@ export default {
     justify-content: center;
     flex: 1;
 }
+
 .title {
     color: black;
     font-size: 50;
@@ -59,18 +54,7 @@ export default {
     font-family: Courier;
 }
 
-.button-1 {
-    background-color: rgb(67, 67, 67);
-    width: 250;
-    height: 50;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10;
-    position: relative; top: 50;
-}
-
-.button-2 {
+.button {
     background-color: rgb(67, 67, 67);
     width: 250;
     height: 100;
@@ -90,13 +74,6 @@ export default {
 .As-a {
     color: black;
     font-size: 40;
-    font-family: Courier;
-}
-
-.Or {
-    color: black;
-    font-size: 40;
-    position: relative; top: 60;
     font-family: Courier;
 }
 

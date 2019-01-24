@@ -1,18 +1,18 @@
 <template>
     <view class="container">
         <text class="title">You In?</text>
-        <touchable-opacity class="button-1" :on-press="handleLogin">
-            <text class="button-text">Login</text>
+        <text class="As-a">Sign Up as a</text>
+        <touchable-opacity class="button-1" :on-press="handleGuestSU">
+            <text class="button-text">Bar Guest</text>
         </touchable-opacity>
-        <touchable-opacity class="button-2" :on-press="handleSignup">
-            <text class="button-text">Sign Up</text>
+        <text class="Or">Or a</text>
+        <touchable-opacity class="button-2" :on-press="handleBTSignUp">
+            <text class="button-text">Bartender</text>
         </touchable-opacity>
-    </view>
+        </view>
 </template>
 
 <script>
-import { Font } from 'expo';
-
 export default {
     props: {
         navigation: {
@@ -20,25 +20,12 @@ export default {
         }
     },
 
-    data() {
-        return {
-            isLoaded: false
-    }
-    },
-
-    async mounted() {
-        await Expo.Font.loadAsync({
-            'Reenie Beanie': require('./assets/fonts/ReenieBeanie.ttf')
-        })
-    this.isLoaded = true;
-    },
-
     methods: {
-        handleLogin() {
-            this.navigation.navigate("Login");
+        handleGuestSU() {
+            this.navigation.navigate("GuestSU");
         },
-        handleSignup() {
-            this.navigation.navigate("Signup");
+        handleBTSignUp() {
+            this.navigation.navigate("BTSignUp");
         }
     }
 }
@@ -60,7 +47,7 @@ export default {
 
 .button-1 {
     background-color: rgb(67, 67, 67);
-    width: 200;
+    width: 250;
     height: 50;
     display: flex;
     justify-content: center;
@@ -71,8 +58,8 @@ export default {
 
 .button-2 {
     background-color: rgb(67, 67, 67);
-    width: 200;
-    height: 50;
+    width: 250;
+    height: 100;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,6 +70,20 @@ export default {
 .button-text {
     color: rgb(159, 159, 159);
     font-size: 40;
+    font-family: Courier;
+}
+
+.As-a {
+    color: black;
+    font-size: 40;
+    position: relative; top: 30;
+    font-family: Courier;
+}
+
+.Or {
+    color: black;
+    font-size: 40;
+    position: relative; top: 60;
     font-family: Courier;
 }
 </style>
