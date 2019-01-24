@@ -1,21 +1,32 @@
 <template>
     <view class="container">
-        <text class="title">You In?</text>
-        <touchable-opacity class="button-1" :on-press="handleLogin">
-            <text class="button-text">Login</text>
-        </touchable-opacity>
-        <touchable-opacity class="button-2" :on-press="handleSignup">
-            <text class="button-text">Sign Up</text>
-        </touchable-opacity>
+        <status-bar :barStyle="'dark-content'"></status-bar>
+        <image-background :source="bartenderImg" class="imageContainer">
+            <text class="title">You In?</text>
+            <touchable-opacity class="button-1" :on-press="handleLogin">
+                <text class="button-text">Login</text>
+            </touchable-opacity>
+            <touchable-opacity class="button-2" :on-press="handleSignup">
+                <text class="button-text">Sign Up</text>
+            </touchable-opacity>
+        </image-background>
     </view>
 </template>
 
 <script>
+import bartenderImg from "/Users/reidgarner/Galv-Projects/CAPSTONE/You-In-Frontend/assets/Bartender-Background.jpg";
+
 export default {
     props: {
         navigation: {
             type: Object
         }
+    },
+
+    data() {
+        return {
+            bartenderImg: bartenderImg
+    }
     },
 
     methods: {
@@ -30,6 +41,15 @@ export default {
 </script>
 
 <style>
+.imageContainer {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    opacity: .8;
+    position: relative; z-index: -1;
+}
+
 .container {
     background-color: white;
     align-items: center;
@@ -41,6 +61,7 @@ export default {
     font-size: 50;
     position: relative; bottom: 150;
     font-family: Courier;
+    opacity: 1;
 }
 
 .button-1 {
