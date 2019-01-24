@@ -45,7 +45,6 @@ export default {
 
 .title {
     font-size: 50;
-    /* position: relative; bottom: 375; */
     font-family: Courier;
 }
 
@@ -87,5 +86,4 @@ export default {
     font-size: 40;
     font-family: Courier;
 }
-
 </style>
