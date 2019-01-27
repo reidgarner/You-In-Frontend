@@ -3,19 +3,21 @@
         <status-bar :barStyle="'dark-content'"></status-bar>
         <image-background :source="bartenderImg" class="imageContainer">
             <image :source="logo" class="logo"></image>
-            <touchable-opacity class="button-1" :on-press="handleLogin">
-                <text class="button-text">Login</text>
-            </touchable-opacity>
-            <touchable-opacity class="button-2" :on-press="handleSignup">
-                <text class="button-text">Sign Up</text>
-            </touchable-opacity>
+            <view class="button-container">
+                <touchable-opacity class="button-1" :on-press="handleLogin">
+                    <text class="button-text">Login</text>
+                </touchable-opacity>
+                <touchable-opacity class="button-2" :on-press="handleSignup">
+                    <text class="button-text">Sign Up</text>
+                </touchable-opacity>
+            </view>
         </image-background>
     </view>
 </template>
 
 <script>
-import bartenderImg from "/Users/reidgarner/Galv-Projects/CAPSTONE/You-In-Frontend/assets/bartender-opacified-2.png";
-import logo from "/Users/reidgarner/Galv-Projects/CAPSTONE/You-In-Frontend/assets/Logo.png";
+import bartenderImg from "/Users/reidgarner/Galv-Projects/CAPSTONE/You-In-Frontend/assets/bartender-opacified.png";
+import logo from "/Users/reidgarner/Galv-Projects/CAPSTONE/You-In-Frontend/assets/red_cream_ud_logo_transparent.png";
 
 export default {
     props: {
@@ -27,10 +29,7 @@ export default {
     data() {
         return {
             logo: logo,
-            bartenderImg: bartenderImg,
-            statusBar: {
-                backgroundColor: 'black'
-                }
+            bartenderImg: bartenderImg
     }
     },
 
@@ -51,7 +50,6 @@ export default {
     align-items: center;
     justify-content: center;
     width: 130%;
-    /* opacity: .8; */
     position: relative; left: 50;
 }
 
@@ -63,41 +61,39 @@ export default {
 }
 
 .logo {
-    height: 25%;
-    width: 40%;
-    position: relative; bottom: 190; right: 135;
-    border-radius: 7;
+    height: 103%;
+    width: 103%;
+    position: relative; bottom: 50; right: 50;
+    opacity: 1;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    position: relative; bottom: 87; right: 52;
 }
 
 .button-1 {
-    background-color: rgb(67, 67, 67);
-    width: 200;
+    background-color: #8D1B33;
+    width: 190;
     height: 50;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10;
-    position: relative; top: 50;
 }
 
 .button-2 {
-    background-color: rgb(67, 67, 67);
-    width: 200;
+    background-color: #8D1B33;
+    width: 190;
     height: 50;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10;
-    position: relative; top: 80;
 }
 
 .button-text {
-    color: rgb(159, 159, 159);
+    color: #F7C7AA;
     font-size: 40;
-    font-family: Courier;
-}
-
-.status-bar{
-    background-color: black;
+    font-family: Helvetica;
 }
 </style>
