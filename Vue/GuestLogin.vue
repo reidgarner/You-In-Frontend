@@ -71,7 +71,7 @@ export default {
 .logo2 {
     height: 54%;
     width: 50%;
-    position: relative; bottom: 169; right: 45;
+    position: relative; bottom: 168; right: 45;
     opacity: 1;
 }
 

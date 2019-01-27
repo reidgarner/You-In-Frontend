@@ -59,7 +59,7 @@ export default {
 .title {
     color: black;
     font-size: 50;
-    font-family: Courier;
+    font-family: Helvetica;
 }
 
 .border {

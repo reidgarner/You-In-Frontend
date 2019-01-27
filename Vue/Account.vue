@@ -45,12 +45,12 @@ export default {
 
 .title {
     font-size: 50;
-    font-family: Courier;
+    font-family: Helvetica;
 }
 
 .button-1 {
     background-color: rgb(67, 67, 67);
-    width: 380;
+    width: 300;
     height: 50;
     display: flex;
     justify-content: center;
@@ -61,7 +61,7 @@ export default {
 
 .button-2 {
     background-color: rgb(67, 67, 67);
-    width: 380;
+    width: 300;
     height: 50;
     display: flex;
     justify-content: center;
@@ -72,7 +72,7 @@ export default {
 
 .button-3 {
     background-color: rgb(67, 67, 67);
-    width: 380;
+    width: 300;
     height: 50;
     display: flex;
     justify-content: center;
@@ -84,6 +84,6 @@ export default {
 .button-text {
     color: rgb(159, 159, 159);
     font-size: 40;
-    font-family: Courier;
+    font-family: Helvetica;
 }
 </style>

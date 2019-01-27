@@ -39,7 +39,7 @@ export default {
 
 .title {
     font-size: 50;
-    font-family: Courier;
+    font-family: Helvetica;
 }
 
 .username {
