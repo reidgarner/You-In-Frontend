@@ -1,23 +1,38 @@
 <template>
     <view class="container">
-        <text class="title">Account</text>
-        <touchable-opacity class="button-1" :on-press="handleEdit">
-            <text class="button-text">Edit Info</text>
-        </touchable-opacity>
-        <touchable-opacity class="button-2" :on-press="handleAddWork">
-            <text class="button-text">Add Workplace</text>
-        </touchable-opacity>
-        <touchable-opacity class="button-3" :on-press="handleDelete">
-            <text class="button-text">Delete Account</text>
-        </touchable-opacity>
+        <image-background :source="beerBackdrop" class="imageContainer">
+            <text class="title">Account</text>
+            <image :source="logo" class="logo"></image>
+            <view class="button-container">
+                <touchable-opacity class="button" :on-press="handleEdit">
+                    <text class="button-text">Edit Info</text>
+                </touchable-opacity>
+                <touchable-opacity class="button" :on-press="handleAddWork">
+                    <text class="button-text">Add Workplace</text>
+                </touchable-opacity>
+                <touchable-opacity class="button" :on-press="handleDelete">
+                    <text class="button-text">Delete Account</text>
+                </touchable-opacity>
+            </view>
+        </image-background>
     </view>
 </template>
 
 <script>
+import beerBackdrop from "/Users/reidgarner/Galv-Projects/CAPSTONE/You-In-Frontend/assets/beer_3_background.png";
+import logo from "/Users/reidgarner/Galv-Projects/CAPSTONE/You-In-Frontend/assets/beer_transparent.png";
+
 export default {
     props: {
         navigation: {
             type: Object
+        }
+    },
+
+    data() {
+        return {
+            beerBackdrop: beerBackdrop,
+            logo: logo
         }
     },
 
@@ -38,18 +53,35 @@ export default {
 
 <style>
 .container {
-    background-color: white;
+    background-color: black;
     align-items: center;
     flex: 1;
 }
 
-.title {
-    font-size: 50;
-    font-family: Helvetica;
+.imageContainer {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
-.button-1 {
-    background-color: rgb(67, 67, 67);
+.title {
+    color: #F7C7AA;
+    font-size: 50;
+    font-family: Helvetica;
+    position: relative; top: 50;
+}
+
+.button-container {
+    height: 200;
+    width: 300; 
+    display: flex;
+    justify-content: space-around;
+    position: relative; bottom: 150;
+}
+
+.button {
+    background-color: #8D1B33;
     width: 300;
     height: 50;
     display: flex;
@@ -59,31 +91,16 @@ export default {
     position: relative; top: 50;
 }
 
-.button-2 {
-    background-color: rgb(67, 67, 67);
-    width: 300;
-    height: 50;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10;
-    position: relative; top: 80;
-}
-
-.button-3 {
-    background-color: rgb(67, 67, 67);
-    width: 300;
-    height: 50;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10;
-    position: relative; top: 110;
-}
-
 .button-text {
-    color: rgb(159, 159, 159);
+    color: #F7C7AA;
     font-size: 40;
     font-family: Helvetica;
+}
+
+.logo {
+    height: 70%;
+    width: 70%;
+    position: relative; top: 25;
+    opacity: .78;
 }
 </style>

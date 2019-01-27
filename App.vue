@@ -25,7 +25,7 @@ const Drawer = DrawerNavigator(
     Signout: MainScreen
   },
   {
-    initialRouteName: "Main",
+    initialRouteName: "User",
   }
 );
 const AppNavigation = StackNavigator(
@@ -42,7 +42,7 @@ const AppNavigation = StackNavigator(
     YourBartenders: YourBartendersScreen
   },
   {
-    initialRouteName: 'Drawer',
+    initialRouteName: 'YourGuests',
   }
 );
 export default {

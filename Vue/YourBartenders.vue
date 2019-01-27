@@ -1,22 +1,26 @@
 <template>
     <view class="container">
-        <text class="title">Your Bartenders</text>
-        <scroll-view :style="{width: '100%'}">
-            <view class="border" v-for="(bartender, index) in bartenders" :key="index">
-                <touchable-opacity class="flex-container" :on-press="() => handleListTap(bartender)">
-                    <image 
-                    :style="{width: 40, height: 40, borderRadius: 20, marginRight: 8}"
-                    :source="{uri: bartender.image}"
-                    />
-                    <text>{{ bartender.name }}</text>
-                    <text class="IO">{{ bartender.IO }}</text>
-                </touchable-opacity>
-            </view>
-        </scroll-view>
+        <image-background :source="gradient" class="imageContainer">
+            <text class="title">Your Bartenders</text>
+            <scroll-view :style="{width: '100%'}">
+                <view class="border" v-for="(bartender, index) in bartenders" :key="index">
+                    <touchable-opacity class="flex-container" :on-press="() => handleListTap(bartender)">
+                        <image 
+                        :style="{width: 40, height: 40, borderRadius: 20, marginRight: 8}"
+                        :source="{uri: bartender.image}"
+                        />
+                        <text class="bartender">{{ bartender.name }}</text>
+                        <text class="IO">{{ bartender.IO }}</text>
+                    </touchable-opacity>
+                </view>
+            </scroll-view>
+        </image-background>
     </view>
 </template>
 
 <script>
+import gradient from "/Users/reidgarner/Galv-Projects/CAPSTONE/You-In-Frontend/assets/coolHue-gradient.png";
+
 export default {
     props: {
         navigation: {
@@ -35,7 +39,8 @@ export default {
                 { name: "Gary Anderson", IO: "OUT", image: "https://media.licdn.com/dms/image/C5603AQE3krKwFpFC8w/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=EJvYlUM86hPbnjffQMyeH3bfCYuZjsH3_XNOTBsd_9g"},
                 { name: "Sonja Chacon", IO: "OUT", image: "https://media.licdn.com/dms/image/C4E03AQGEg5ZaDPyHCQ/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=ppVLrLBhrOIXl-rF80pw_p3M0ln5h3joNoffQfjcUpo"},
                 { name: "Ben Rumsey", IO: "OUT", image: "https://media.licdn.com/dms/image/C4E03AQHDx8tdiYUO8w/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=bt7H5j4xLR08-wj1wov8y0-VVyUh1friEZ4iRyrHbKo"}
-            ]
+            ],
+            gradient: gradient
     }
     },
 
@@ -52,13 +57,19 @@ export default {
 
 <style>
 .container {
-    background-color: white;
     align-items: center;
     flex: 1;
 }
 
+.imageContainer {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 .title {
-    color: black;
+    color: whitesmoke;
     font-size: 50;
     font-family: Helvetica;
 }
@@ -72,7 +83,12 @@ export default {
     align-items: center;
 }
 
+.bartender {
+    color: whitesmoke;
+}
+
 .IO {
+    color: whitesmoke;
     margin-left: auto;
 }
 </style>

@@ -1,21 +1,25 @@
 <template>
     <view class="container">
-        <text class="title">Your Guests</text>
-        <scroll-view :style="{width: '100%'}">
-            <view class="border" v-for="(guest, index) in guests" :key="index">
-                <touchable-opacity class="flex-container" :on-press="() => handleListTap(guest)">
-                    <image 
-                    :style="{width: 40, height: 40, borderRadius: 20, marginRight: 8}"
-                    :source="{uri: guest.image}"
-                    />
-                    <text>{{ guest.name }}</text>
-                </touchable-opacity>
-            </view>
-        </scroll-view>
+        <image-background :source="gradient" class="imageContainer">
+            <text class="title">Your Guests</text>
+            <scroll-view :style="{width: '100%'}">
+                <view class="border" v-for="(guest, index) in guests" :key="index">
+                    <touchable-opacity class="flex-container" :on-press="() => handleListTap(guest)">
+                        <image 
+                        :style="{width: 40, height: 40, borderRadius: 20, marginRight: 8}"
+                        :source="{uri: guest.image}"
+                        />
+                        <text class="guest-name">{{ guest.name }}</text>
+                    </touchable-opacity>
+                </view>
+            </scroll-view>
+        </image-background>
     </view>
 </template>
 
 <script>
+import gradient from "/Users/reidgarner/Galv-Projects/CAPSTONE/You-In-Frontend/assets/coolHue-gradient.png";
+
 export default {
     props: {
         navigation: {
@@ -34,7 +38,8 @@ export default {
                 { name: "Gary Anderson", image: "https://media.licdn.com/dms/image/C5603AQE3krKwFpFC8w/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=EJvYlUM86hPbnjffQMyeH3bfCYuZjsH3_XNOTBsd_9g"},
                 { name: "Sonja Chacon", image: "https://media.licdn.com/dms/image/C4E03AQGEg5ZaDPyHCQ/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=ppVLrLBhrOIXl-rF80pw_p3M0ln5h3joNoffQfjcUpo"},
                 { name: "Ben Rumsey", image: "https://media.licdn.com/dms/image/C4E03AQHDx8tdiYUO8w/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=bt7H5j4xLR08-wj1wov8y0-VVyUh1friEZ4iRyrHbKo"}
-            ]
+            ],
+            gradient: gradient
         }
     },
 
@@ -51,13 +56,19 @@ export default {
 
 <style>
 .container {
-    background-color: white;
     align-items: center;
     flex: 1;
 }
 
+.imageContainer {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 .title {
-    color: black;
+    color: whitesmoke;
     font-size: 50;
     font-family: Helvetica;
 }
@@ -69,5 +80,9 @@ export default {
 .flex-container {
     flex-direction: row;
     align-items: center;
+}
+
+.guest-name {
+    color: whitesmoke;
 }
 </style>
