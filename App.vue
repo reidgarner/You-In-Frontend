@@ -42,7 +42,7 @@ const AppNavigation = StackNavigator(
     YourBartenders: YourBartendersScreen
   },
   {
-    initialRouteName: 'GuestSU',
+    initialRouteName: 'BTLogin',
   }
 );
 export default {
