@@ -49,7 +49,6 @@ export default {
 
 <style>
 .container {
-    background-color: white;
     align-items: center;
     justify-content: center;
     flex: 1;
