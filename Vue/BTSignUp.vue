@@ -110,7 +110,6 @@ export default {
     width: 300;
     position: relative; bottom: 250; right: 47;
     opacity: .85;
-
 }
 
 .input {

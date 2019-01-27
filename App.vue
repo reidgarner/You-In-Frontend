@@ -42,7 +42,7 @@ const AppNavigation = StackNavigator(
     YourBartenders: YourBartendersScreen
   },
   {
-    initialRouteName: 'Drawer',
+    initialRouteName: 'GuestSU',
   }
 );
 export default {
