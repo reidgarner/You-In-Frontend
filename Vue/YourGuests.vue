@@ -6,7 +6,7 @@
                 <view class="border" v-for="(guest, index) in guests" :key="index">
                     <touchable-opacity class="flex-container" :on-press="() => handleListTap(guest)">
                         <image 
-                        :style="{width: 40, height: 40, borderRadius: 20, marginRight: 8}"
+                        :style="{width: 50, height: 50, borderRadius: 25, marginRight: 8}"
                         :source="{uri: guest.image}"
                         />
                         <text class="guest-name">{{ guest.name }}</text>
@@ -84,5 +84,6 @@ export default {
 
 .guest-name {
     color: whitesmoke;
+    font-size: 30;
 }
 </style>

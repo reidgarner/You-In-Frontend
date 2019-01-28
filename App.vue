@@ -25,9 +25,10 @@ const Drawer = DrawerNavigator(
     Signout: MainScreen
   },
   {
-    initialRouteName: "User",
+    initialRouteName: "Main",
   }
 );
+
 const AppNavigation = StackNavigator(
   {
     Drawer: Drawer,
@@ -38,11 +39,12 @@ const AppNavigation = StackNavigator(
     BTSignUp: BTSignUpScreen,
     GuestLogin: GuestLoginScreen,
     BTLogin: BTLoginScreen,
+    User: UserScreen,
     YourGuests: YourGuestsScreen,
     YourBartenders: YourBartendersScreen
   },
   {
-    initialRouteName: 'YourGuests',
+    initialRouteName: 'GuestLogin',
   }
 );
 export default {

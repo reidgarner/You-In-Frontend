@@ -8,7 +8,7 @@
                 <text-input class="input" auto-capitalize="none" v-model="email" placeholder="Email"/>
                 <text-input class="input" auto-capitalize="none" v-model="password" placeholder="Password"/>
             </view>
-            <touchable-opacity class="button" :on-press="handleYourGuests">
+            <touchable-opacity class="button" :on-press="handleUserScreen">
                 <text class="button-text">Login</text>
             </touchable-opacity>
         </image-background>
@@ -38,8 +38,8 @@ export default {
     },
 
     methods: {
-        handleYourGuests() {
-            this.navigation.navigate("YourGuests");
+        handleUserScreen() {
+            this.navigation.navigate("User");
         }
     }
 }

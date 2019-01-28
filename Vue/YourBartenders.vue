@@ -6,10 +6,10 @@
                 <view class="border" v-for="(bartender, index) in bartenders" :key="index">
                     <touchable-opacity class="flex-container" :on-press="() => handleListTap(bartender)">
                         <image 
-                        :style="{width: 40, height: 40, borderRadius: 20, marginRight: 8}"
+                        :style="{width: 50, height: 50, borderRadius: 25, marginRight: 8}"
                         :source="{uri: bartender.image}"
                         />
-                        <text class="bartender">{{ bartender.name }}</text>
+                        <text class="bartender-name">{{ bartender.name }}</text>
                         <text class="IO">{{ bartender.IO }}</text>
                     </touchable-opacity>
                 </view>
@@ -83,12 +83,14 @@ export default {
     align-items: center;
 }
 
-.bartender {
+.bartender-name {
     color: whitesmoke;
+    font-size: 25;
 }
 
 .IO {
     color: whitesmoke;
     margin-left: auto;
+    font-size: 25;
 }
 </style>
