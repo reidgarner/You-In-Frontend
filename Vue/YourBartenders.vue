@@ -1,25 +1,27 @@
 <template>
     <view class="container">
-        <image-background :source="gradient" class="imageContainer">
-            <text class="title">Your Bartenders</text>
-            <scroll-view :style="{width: '100%'}">
-                <view class="border" v-for="(bartender, index) in bartenders" :key="index">
-                    <touchable-opacity class="flex-container" :on-press="() => handleListTap(bartender)">
-                        <image 
-                        :style="{width: 50, height: 50, borderRadius: 25, marginRight: 8}"
-                        :source="{uri: bartender.image}"
-                        />
-                        <text class="bartender-name">{{ bartender.name }}</text>
-                        <text class="IO">{{ bartender.IO }}</text>
-                    </touchable-opacity>
-                </view>
-            </scroll-view>
-        </image-background>
+        <view class="your-bartenders-container">
+            <image :source="YourBartender1" class="YourBartender1"></image>
+            <image :source="YourBartender2" class="YourBartender2"></image>
+        </view>
+        <scroll-view :style="{width: '100%'}">
+            <view class="bartender-list" v-for="(bartender, index) in bartenders" :key="index">
+                <touchable-opacity class="flex-container" :on-press="() => handleListTap(bartender)">
+                    <image 
+                    :style="{width: 50, height: 50, borderRadius: 25, marginRight: 8}"
+                    :source="{uri: bartender.image}"
+                    />
+                    <text class="bartender-name">{{ bartender.name }}</text>
+                    <text class="IO">{{ bartender.IO }}</text>
+                </touchable-opacity>
+            </view>
+        </scroll-view>
     </view>
 </template>
 
 <script>
-import gradient from "/Users/reidgarner/Galv-Projects/CAPSTONE/You-In-Frontend/assets/coolHue-gradient.png";
+import YourBartender1 from "/Users/reidgarner/Galv-Projects/CAPSTONE/You-In-Frontend/assets/YourBartenders_Tan.png";
+import YourBartender2 from "/Users/reidgarner/Galv-Projects/CAPSTONE/You-In-Frontend/assets/YourBartenders_Black.png";
 
 export default {
     props: {
@@ -40,7 +42,8 @@ export default {
                 { name: "Sonja Chacon", IO: "OUT", image: "https://media.licdn.com/dms/image/C4E03AQGEg5ZaDPyHCQ/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=ppVLrLBhrOIXl-rF80pw_p3M0ln5h3joNoffQfjcUpo"},
                 { name: "Ben Rumsey", IO: "OUT", image: "https://media.licdn.com/dms/image/C4E03AQHDx8tdiYUO8w/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=bt7H5j4xLR08-wj1wov8y0-VVyUh1friEZ4iRyrHbKo"}
             ],
-            gradient: gradient
+            YourBartender1: YourBartender1,
+            YourBartender2: YourBartender2
     }
     },
 
@@ -57,25 +60,34 @@ export default {
 
 <style>
 .container {
+    background-color: rgba(74, 0, 0, 0.516);
     align-items: center;
     flex: 1;
 }
 
-.imageContainer {
-    flex: 1;
-    align-items: center;
+.your-bartenders-container {
+    height: 80;
+    width: 300;
+    display: flex;
     justify-content: center;
-    width: 100%;
+    align-items: center;
 }
 
-.title {
-    color: whitesmoke;
-    font-size: 50;
-    font-family: Helvetica;
+.YourBartender1 {
+    height: 143%;
+    width: 143%;
+    position: relative; top: 85;
 }
 
-.border {
+.YourBartender2 {
+    height: 148%;
+    width: 145%;
+    position: relative; bottom: 30;
+}
+
+.bartender-list {
     padding: 15;
+    position: relative; bottom: 5;
 }
 
 .flex-container {

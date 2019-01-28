@@ -77,7 +77,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; top: 30;
+    position: relative; top: 5;
 }
 
 .logo {
@@ -103,7 +103,7 @@ export default {
     align-items: center;
     border-radius: 10;
     opacity: .85;
-    position: relative; bottom: 25; right: 47;
+    position: relative; bottom: 0; right: 47;
 }
 
 .button-text {
@@ -115,9 +115,9 @@ export default {
 .input-container {
     display: flex;
     justify-content: space-evenly;
-    height: 200;
+    height: 150;
     width: 300;
-    position: relative; bottom: 25; right: 47;
+    position: relative; bottom: 70; right: 47;
     opacity: .85;
 }
 
@@ -136,7 +136,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; top: 250;
+    position: relative; top: 190;
 }
 
 .BarGuest1 {
@@ -147,7 +147,7 @@ export default {
 
 .BarGuest2 {
     height: 205%;
-    width: 200%;
+    width: 203%;
     position: relative; bottom: 305; right: 47;
 }
 </style>

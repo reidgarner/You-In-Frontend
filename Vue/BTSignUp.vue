@@ -151,7 +151,7 @@ export default {
 
 .Bartender2 {
     height: 205%;
-    width: 200%;
+    width: 203%;
     position: relative; bottom: 305; right: 47;
 }
 </style>
