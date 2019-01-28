@@ -107,7 +107,7 @@ export default {
     align-items: center;
     border-radius: 10;
     opacity: .85;
-    position: relative; bottom: 25; right: 47;
+    position: relative; bottom: 40; right: 47;
 }
 
 .button-text {
@@ -119,9 +119,9 @@ export default {
 .input-container {
     display: flex;
     justify-content: space-evenly;
-    height: 200;
+    height: 250;
     width: 300;
-    position: relative; bottom: 25; right: 47;
+    position: relative; bottom: 50; right: 47;
     opacity: .85;
 }
 
@@ -140,7 +140,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; top: 250;
+    position: relative; top: 205;
 }
 
 .Bartender1 {
