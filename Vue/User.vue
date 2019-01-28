@@ -6,7 +6,7 @@
                 <text class="workplace" >@{{ bartender.workplace }}</text>
                 <image class="QRcode"
                 :style="{width: 300, height: 300, borderRadius: 20}"
-                :source="{uri: bartender.qr}"
+                :source="QRCode"
                 />
             </view>
             <image :source="logo" class="logo"></image>
@@ -20,6 +20,7 @@
 <script>
 import beerBackdrop from "/Users/reidgarner/Galv-Projects/CAPSTONE/You-In-Frontend/assets/beer_3_background.png";
 import logo from "/Users/reidgarner/Galv-Projects/CAPSTONE/You-In-Frontend/assets/beer_transparent.png";
+import QRCode from "/Users/reidgarner/Galv-Projects/CAPSTONE/You-In-Frontend/assets/QR_Code.png";
 
 export default {
     props: {
@@ -31,10 +32,11 @@ export default {
     data() {
         return {
             bartenders: [
-                { name: "Reid Garner", workplace: "Five Bar", qr: "/Users/reidgarner/Galv-Projects/CAPSTONE/You-In-Frontend/assets/QR_Code.png"}
+                { name: "Reid Garner", workplace: "Five Bar"}
             ],
             beerBackdrop: beerBackdrop,
-            logo: logo
+            logo: logo,
+            QRCode: QRCode
         }
     },
 
