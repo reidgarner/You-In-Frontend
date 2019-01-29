@@ -1,7 +1,7 @@
 <template>
     <view class="container">
         <image-background :source="beerBackdrop" class="imageContainer">
-            <view class="username-container" v-for="(bartender, index) in bartenders" :key="index">
+            <view class="username-container">
                 <text-input class="input" auto-capitalize="none" v-model="workplace" placeholder="Search for Workplace"/>
                 <image class="map"
                 :style="{width: 300, height: 300, borderRadius: 20}"
@@ -50,7 +50,7 @@ export default {
 
 <style>
 .container {
-    background-color: black;
+    background-color: rgb(99, 99, 99);
     align-items: center;
     flex: 1;
 }

@@ -27,7 +27,7 @@ const Drawer = DrawerNavigator(
     Signout: MainScreen
   },
   {
-    initialRouteName: "Account",
+    initialRouteName: "Main",
   }
 );
 

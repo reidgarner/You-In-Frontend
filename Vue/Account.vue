@@ -53,7 +53,7 @@ export default {
 
 <style>
 .container {
-    background-color: black;
+    background-color: rgb(99, 99, 99);
     align-items: center;
     flex: 1;
 }
