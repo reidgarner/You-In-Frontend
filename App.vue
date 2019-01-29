@@ -16,6 +16,8 @@ import YourGuestsScreen from "./Vue/YourGuests";
 import YourBartendersScreen from "./Vue/YourBartenders";
 import UserScreen from "./Vue/User";
 import AccountScreen from "./Vue/Account";
+import EditInfoScreen from "./Vue/EditInfo";
+import PlaceOfWorkScreen from "./Vue/PlaceOfWork";
 
 const Drawer = DrawerNavigator(
   {
@@ -25,7 +27,7 @@ const Drawer = DrawerNavigator(
     Signout: MainScreen
   },
   {
-    initialRouteName: "Main",
+    initialRouteName: "Account",
   }
 );
 
@@ -41,7 +43,9 @@ const AppNavigation = StackNavigator(
     BTLogin: BTLoginScreen,
     User: UserScreen,
     YourGuests: YourGuestsScreen,
-    YourBartenders: YourBartendersScreen
+    YourBartenders: YourBartendersScreen,
+    EditInfo: EditInfoScreen,
+    PlaceOfWork: PlaceOfWorkScreen
   },
   {
     initialRouteName: 'Drawer',

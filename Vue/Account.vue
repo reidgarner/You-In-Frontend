@@ -4,7 +4,7 @@
             <text class="title">Account</text>
             <image :source="logo" class="logo"></image>
             <view class="button-container">
-                <touchable-opacity class="button" :on-press="handleEdit">
+                <touchable-opacity class="button" :on-press="handleEditInfo">
                     <text class="button-text">Edit Info</text>
                 </touchable-opacity>
                 <touchable-opacity class="button" :on-press="handleAddWork">
@@ -37,11 +37,11 @@ export default {
     },
 
     methods: {
-        handleEdit() {
+        handleEditInfo() {
             this.navigation.navigate("EditInfo");
         },
         handleAddWork() {
-            this.navigation.navigate("AddWork");
+            this.navigation.navigate("PlaceOfWork");
         },
         handleDelete() {
             this.navigation.navigate("Main");
