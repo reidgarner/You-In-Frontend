@@ -6,7 +6,7 @@ A native app that uses geolocation to keep track of bartender attendance in orde
 ## Project Images: 
 
 ### Landing Screen
-<img src="READMEassets/LandingPage.png" width="50">
+<img src="READMEassets/LandingPage.png" width="200">
 
 ### Sign In
 
