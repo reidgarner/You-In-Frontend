@@ -1,7 +1,7 @@
 # You In? - Capstone Project 
 
 ## Description: 
-A native app that uses geolocation to keep track of bartender attendance in order to optimize service received by the guest as well as capital gained by the bartender
+A native app that uses geolocation to keep track of bartender attendance in order to optimize service received by the guest as well as capital gained by the bartender.
 
 ## Project Images: 
 
