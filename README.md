@@ -7,35 +7,35 @@ A native app that uses geolocation to keep track of bartender attendance in orde
 
 ### Landing Screen
 
-![Home](READMEassets/LandingPage.png | width=100)
+![Home](READMEassets/LandingPage.png =100x)
 
 ### Sign In
 
-![SignIn](READMEassets/SignIn.png | width=100)
+![SignIn](READMEassets/SignIn.png =100x)
 
 ### Drawer
 
-![Drawer](READMEassets/DrawerView.png | width=100)
+![Drawer](READMEassets/DrawerView.png =100x)
 
 ### Bartender Sign In
 
-![BTSignIn](READMEassets/BartenderSignIn.png | width=100)
+![BTSignIn](READMEassets/BartenderSignIn.png =100x)
 
 ### Bartender User Page
 
-![BTUserPage](READMEassets/BartenderUserPage.png | width=100)
+![BTUserPage](READMEassets/BartenderUserPage.png =100x)
 
 ### Bartender's Subscribed Guests
 
-![BTGuests](READMEassets/YourGuests.png | width=100)
+![BTGuests](READMEassets/YourGuests.png =100x)
 
 ### Guest Sign In
 
-![GuestSignIn](READMEassets/GuestSignIn.png | width=100)
+![GuestSignIn](READMEassets/GuestSignIn.png =100x)
 
 ### Guest's Preferred Bartenders
 
-![YourBartenders](READMEassets/YourBartenders.png | width=100)
+![YourBartenders](READMEassets/YourBartenders.png =100x)
 
 ### Technologies Used:
 - Vue Native 
