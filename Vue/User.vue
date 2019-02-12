@@ -32,7 +32,7 @@ export default {
     data() {
         return {
             bartenders: [
-                { name: "Reid Garner", workplace: "Five Bar"}
+                { name: "Andrew Pedersen", workplace: "Refinery"}
             ],
             beerBackdrop: beerBackdrop,
             logo: logo,
@@ -63,7 +63,7 @@ export default {
 }
 
 .username {
-    font-size: 60;
+    font-size: 48;
     color: whitesmoke;
 }
 

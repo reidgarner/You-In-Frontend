@@ -12,7 +12,7 @@
                         :style="{width: 50, height: 50, borderRadius: 25, marginRight: 8}"
                         :source="{uri: bartender.image}"
                         />
-                        <text class="bartender-name">{{ bartender.name }}</text>
+                        <text class="bartender-name"> {{ bartender.name }}</text>
                         <text class="IO">{{ bartender.IO }}</text>
                     </touchable-opacity>
                 </view>
@@ -37,13 +37,8 @@ export default {
         return {
             bartenders: [
                 { name: "Andrew Pedersen", IO: "OUT", image: "https://media.licdn.com/dms/image/C4E03AQEpxR0WN9GdcQ/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=oiOQvx3RNjfSSIDt8WZPY2KxHzdU5mZt77ru6btBE0o"},
-                { name: "Josh Scala", IO: "OUT", image: "https://media.licdn.com/dms/image/C4E03AQGYJwFr3fgYMQ/profile-displayphoto-shrink_800_800/0?e=1554336000&v=beta&t=zC5L3DcvS8M_75yAe4e2yRZytRzIosb_8ClErWOMWWc"},
-                { name: "Meredith Fontana", IO: "OUT", image: "https://media.licdn.com/dms/image/C4E03AQFa0C4W1juD4Q/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=qodE-DNhf-5dJF_gLPC-fWtRbQdM0cL8wkhPR3cHCNs"},
-                { name: "Jimmy Liang", IO: "OUT", image: "https://media.licdn.com/dms/image/C5103AQFEZJ2HnuAdGA/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=5A-oN3LrBEVnCYQ44Kv1bvm5wUlhZLNeS6IlBYPOpBw"},
-                { name: "DeBronis Warren", IO: "OUT", image: "https://media.licdn.com/dms/image/C5603AQHN3WwoEuuaRQ/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=LYpJXaNVP5TN__Ii0uX74mMqHn5Rjb0vF74OXleSA04"},
-                { name: "Gary Anderson", IO: "OUT", image: "https://media.licdn.com/dms/image/C5603AQE3krKwFpFC8w/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=EJvYlUM86hPbnjffQMyeH3bfCYuZjsH3_XNOTBsd_9g"},
-                { name: "Sonja Chacon", IO: "OUT", image: "https://media.licdn.com/dms/image/C4E03AQGEg5ZaDPyHCQ/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=ppVLrLBhrOIXl-rF80pw_p3M0ln5h3joNoffQfjcUpo"},
-                { name: "Ben Rumsey", IO: "OUT", image: "https://media.licdn.com/dms/image/C4E03AQHDx8tdiYUO8w/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=bt7H5j4xLR08-wj1wov8y0-VVyUh1friEZ4iRyrHbKo"}
+                { name: "Dane Parke", IO: "IN", image: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/38071940_10217130278918784_8573175157164605440_o.jpg?_nc_cat=110&_nc_ht=scontent-sjc3-1.xx&oh=f8ff3ce9c82a9098da7b40dd94acf6e5&oe=5CC02997"},
+                { name: "Evan Young", IO: "IN", image: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/20992580_10214007762654107_3573172220081135910_n.jpg?_nc_cat=101&_nc_ht=scontent-sjc3-1.xx&oh=e476b5f1ea3d5fb0835033d33475fb69&oe=5CFE24A2"}
             ],
             beerBackdrop: beerBackdrop,
             YourBartender1: YourBartender1,
@@ -108,12 +103,12 @@ export default {
 
 .bartender-name {
     color: whitesmoke;
-    font-size: 25;
+    font-size: 27;
 }
 
 .IO {
     color: whitesmoke;
     margin-left: auto;
-    font-size: 25;
+    font-size: 30;
 }
 </style>

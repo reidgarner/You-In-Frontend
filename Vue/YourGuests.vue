@@ -35,13 +35,13 @@ export default {
     data() {
         return {
             guests: [
-                { name: "Andrew Pedersen", image: "https://media.licdn.com/dms/image/C4E03AQEpxR0WN9GdcQ/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=oiOQvx3RNjfSSIDt8WZPY2KxHzdU5mZt77ru6btBE0o"},
+                { name: "Ryan St Germain", image: "https://media.licdn.com/dms/image/C4E03AQGYPPXg1PWXUw/profile-displayphoto-shrink_800_800/0?e=1554336000&v=beta&t=KkQPanB7PD7IGF10_e6lYHhIWOeMNg9PsMA6Y8frmGs"},
                 { name: "Josh Scala", image: "https://media.licdn.com/dms/image/C4E03AQGYJwFr3fgYMQ/profile-displayphoto-shrink_800_800/0?e=1554336000&v=beta&t=zC5L3DcvS8M_75yAe4e2yRZytRzIosb_8ClErWOMWWc"},
                 { name: "Meredith Fontana", image: "https://media.licdn.com/dms/image/C4E03AQFa0C4W1juD4Q/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=qodE-DNhf-5dJF_gLPC-fWtRbQdM0cL8wkhPR3cHCNs"},
                 { name: "Jimmy Liang", image: "https://media.licdn.com/dms/image/C5103AQFEZJ2HnuAdGA/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=5A-oN3LrBEVnCYQ44Kv1bvm5wUlhZLNeS6IlBYPOpBw"},
+                { name: "Sonja Chacon", image: "https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/19060205_10105214983118923_3700574548883142484_n.jpg?_nc_cat=110&_nc_ht=scontent-sea1-1.xx&oh=fc427d44c7cae92db0ad55dea8b853a6&oe=5CFD4770"},
                 { name: "DeBronis Warren", image: "https://media.licdn.com/dms/image/C5603AQHN3WwoEuuaRQ/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=LYpJXaNVP5TN__Ii0uX74mMqHn5Rjb0vF74OXleSA04"},
                 { name: "Gary Anderson", image: "https://media.licdn.com/dms/image/C5603AQE3krKwFpFC8w/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=EJvYlUM86hPbnjffQMyeH3bfCYuZjsH3_XNOTBsd_9g"},
-                { name: "Sonja Chacon", image: "https://media.licdn.com/dms/image/C4E03AQGEg5ZaDPyHCQ/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=ppVLrLBhrOIXl-rF80pw_p3M0ln5h3joNoffQfjcUpo"},
                 { name: "Ben Rumsey", image: "https://media.licdn.com/dms/image/C4E03AQHDx8tdiYUO8w/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=bt7H5j4xLR08-wj1wov8y0-VVyUh1friEZ4iRyrHbKo"}
             ],
             beerBackdrop: beerBackdrop,

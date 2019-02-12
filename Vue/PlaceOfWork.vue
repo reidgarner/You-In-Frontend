@@ -10,7 +10,7 @@
             </view>
             <image :source="logo" class="logo"></image>
             <touchable-opacity class="button" :on-press="handleUser">
-                <text class="button-text">Add</text>
+                <text class="button-text">Add Workplace</text>
             </touchable-opacity>
         </image-background>
     </view>
@@ -99,7 +99,7 @@ export default {
 
 .button {
     background-color: #8D1B33;
-    width: 250;
+    width: 300;
     height: 60;
     display: flex;
     justify-content: center;
@@ -110,7 +110,7 @@ export default {
 }
 .button-text {
     color: #F7C7AA;
-    font-size: 30;
+    font-size: 40;
     font-family: Helvetica;
 }
 </style>

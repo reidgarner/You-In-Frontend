@@ -48,7 +48,7 @@ const AppNavigation = StackNavigator(
     PlaceOfWork: PlaceOfWorkScreen
   },
   {
-    initialRouteName: 'Drawer',
+    initialRouteName: "Drawer"
   }
 );
 export default {
